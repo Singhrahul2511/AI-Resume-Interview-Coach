@@ -1,0 +1,21 @@
+# .gitignore
+
+# Byte-compiled / optimized / C extensions
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+/rahul/
+venv/
+.venv/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
