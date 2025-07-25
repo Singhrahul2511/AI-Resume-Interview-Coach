@@ -1,33 +1,10 @@
-# render.yaml
-
 services:
   - type: web
-    name: ai-resume-optimizer
+    name: ai-resume-coach
     env: python
-    plan: free # or your preferred plan
-    # render.yaml build command
-    buildCommand: "pip install -r requirements.txt && python -m spacy download en_core_web_sm && python -c 'from auth.db import init_db; init_db()'"
+    plan: free 
+    buildCommand: "pip install -r requirements.txt && python -c 'from auth.db import init_db; init_db()'"
     startCommand: "streamlit run app.py --server.port $PORT --server.address 0.0.0.0"
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11
-      - fromGroup: mysql-credentials # Name of the secret group in Render
-
-  - type: pserv # Private Service for the database
-    name: mysql-db
-    env: mysql
-    plan: free
-    disk:
-      name: mysql-data
-      mountPath: /var/lib/mysql
-      sizeGB: 1
-    envVars:
-      - key: MYSQL_DATABASE
-        generateValue: true
-      - key: MYSQL_USER
-        generateValue: true
-      - key: MYSQL_PASSWORD
-        generateValue: true
-      - key: MYSQL_ROOT_PASSWORD
-        generateValue: true
-
+        value: 3.12
