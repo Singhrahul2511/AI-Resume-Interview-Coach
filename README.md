@@ -87,12 +87,13 @@ You can also check the live version here:
 ---
 
 ## 🛠️ Built With
--Streamlit
--LangChain
--Google-Gemini
--python-docx
--PyMuPDF
--Matplotlib
+
+-[Streamlit]()
+-[LangChain]()
+-[Google-Gemini]()
+-[python-docx]()
+-[PyMuPDF]()
+-[Matplotlib]()
 
 ---
 
