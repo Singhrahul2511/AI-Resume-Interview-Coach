@@ -54,8 +54,8 @@ This Streamlit web app helps users optimize their resume against job description
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Singhrahul2511/Indian_Startup_Analysis.git
-   cd Indian_Startup_Analysis
+   git clone https://github.com/Singhrahul2511/AI-Resume-Interview-Coach.git
+   cd AI-Resume-Interview-Coach
    ```
 
 2. **(Optional) Create a virtual environment**
