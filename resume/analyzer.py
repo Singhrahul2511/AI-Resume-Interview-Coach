@@ -7,8 +7,8 @@ def extract_keywords(text):
     # Remove punctuation, convert to lowercase, and split into words
     text = re.sub(r'[^\w\s]', '', text.lower())
     words = set(text.split())
-    # Remove common stopwords
-    stopwords = {"i", "me", "my", "a", "an", "the", "and", "in", "is", "it"}
+    # You can add more common words to this set to improve results
+    stopwords = {"i", "me", "my", "a", "an", "the", "and", "in", "is", "it", "for", "of", "to", "with"}
     return words - stopwords
 
 def compare_resume(resume_text, job_description):
