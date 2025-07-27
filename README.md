@@ -32,8 +32,9 @@ This Streamlit web app helps users optimize their resume against job description
 │   └── simulator.py
 └── utils/                     # Utility modules
     └── visualizer.py
+```
 
-
+---
 ## 📊 Dashboard Overview
 
 ![Dashboard](demo/overview.png)
@@ -73,8 +74,9 @@ This Streamlit web app helps users optimize their resume against job description
    streamlit run app.py
    ```
 5. **Open your browser**
+    ```bash
    - App will run at `http://localhost:8501`
-
+    ```
 ---
 
 ## 🌐 Live Demo
@@ -85,12 +87,12 @@ You can also check the live version here:
 ---
 
 ## 🛠️ Built With
-Streamlit
-LangChain
-Google Gemini
-python-docx
-PyMuPDF
-Matplotlib
+-[Streamlit]
+-[LangChain]
+-[Google-Gemini]
+-[python-docx]
+-[PyMuPDF]
+-[Matplotlib]
 
 ---
 
