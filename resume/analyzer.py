@@ -1,32 +1,15 @@
-# resume/analyzer.py
-
-import spacy
-
-# Load the spaCy model once
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    # Handle case where model is not downloaded
-    print("Downloading spaCy model 'en_core_web_sm'...")
-    from spacy.cli import download
-    download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
-
+import re
 
 def extract_keywords(text):
     """
-    Extracts unique, clean keywords from text using spaCy for lemmatization.
+    Extracts unique, clean keywords from text using a simple split method.
     """
-    doc = nlp(text.lower())
-    keywords = set()
-    for token in doc:
-        # Filter out stopwords, punctuation, and spaces
-        if not token.is_stop and not token.is_punct and not token.is_space:
-            # Lemmatize the token (e.g., 'running' -> 'run')
-            keywords.add(token.lemma_)
-    return keywords
-
-# ... (the rest of your analyzer.py file)
+    # Remove punctuation, convert to lowercase, and split into words
+    text = re.sub(r'[^\w\s]', '', text.lower())
+    words = set(text.split())
+    # Remove common stopwords
+    stopwords = {"i", "me", "my", "a", "an", "the", "and", "in", "is", "it"}
+    return words - stopwords
 
 def compare_resume(resume_text, job_description):
     """Compares the resume and job description to find matched and missing keywords."""
