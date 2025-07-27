@@ -43,7 +43,7 @@ This Streamlit web app helps users optimize their resume against job description
 ![Dashboard](demo/dropbox.png)
 
 ### 📈 Overview Part 2
-![overview](demo/ATS & keyword_Analyzer.png)
+![overview](demo/ATS_keyword_Analyzer.png)
 
 ### 🧠 AI Interview Prep Coach
 ![Funding Graph](demo/interview_prep_coach.png)
