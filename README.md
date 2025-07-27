@@ -1,86 +1,144 @@
-# AI-Powered Resume Optimizer
+# 🚀 AI Resume & Interview Coach
 
-An AI-driven Streamlit application designed to help job seekers optimize their resumes for Applicant Tracking Systems (ATS). This tool analyzes your resume against a job description, calculates a match score, and suggests keywords to improve your chances.
+This Streamlit web app helps users optimize their resume against job descriptions, practice with AI-generated questions, and run a full mock interview simulation.
 
-## 🚀 Features
+---
 
--   **Secure User Authentication**: Login and signup system using MySQL and bcrypt for password hashing.
--   **Resume Parsing**: Supports both PDF and DOCX file uploads.
--   **ATS Score Analysis**: Compares your resume to a job description and provides a percentage score.
--   **Keyword Suggestions**: Highlights matched keywords and shows which crucial keywords are missing.
--   **Automated Resume Editing**: Automatically generates an updated DOCX resume with the missing keywords added to the "Skills" section.
--   **Downloadable Results**: Allows you to download the optimized resume.
--   **Deployment-Ready**: Configured for easy deployment on Render.
+## 📊 Features
 
-## 💻 Tech Stack
+- ✅ **ATS Resume Analysis:** Get an ATS score, see matched vs. missing keywords, and visualize the results.
+- ✅ **Automated Resume Editing:** Automatically add missing keywords to your DOCX resume.
+- ✅ **AI Interview Coach:** Generate behavioral and technical questions based on your resume and a job description.
+- ✅ **AI Mock Interview Simulator:** Engage in a one-on-one conversational interview with an AI based on a job title.
+- ✅ **Performance Summary:** Receive a final feedback report on your mock interview performance.
 
--   **Frontend**: Streamlit
--   **Backend**: Python
--   **Database**: MySQL
--   **Authentication**: bcrypt for password hashing
--   **File Handling**: PyMuPDF (for PDF), python-docx (for DOCX)
--   **Visualization**: Matplotlib
--   **Deployment**: Render
+---
 
-## ⚙️ Local Setup
+## 📁 Project Structure
 
-1.  **Clone the repository:**
-    ```bash
-    git clone <your-repo-url>
-    cd ai-resume-app
-    ```
+```bash
+📦 ai-resume-interview-coach/
+├── app.py                     # Main Streamlit app file
+├── requirements.txt           # Required Python packages
+├── render.yaml                # Render deployment configuration
+├── .gitignore                 # Files to ignore for Git
+├── README.md                  # Project overview
+├── resume/                    # Module for resume processing
+│   ├── analyzer.py
+│   ├── editor.py
+│   └── extractor.py
+├── interview/                 # Module for AI interview features
+│   ├── coach.py
+│   └── simulator.py
+└── utils/                     # Utility modules
+    └── visualizer.py
 
-2.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
 
-3.  **Set up MySQL:**
-    -   Install and run a local MySQL server.
-    -   Create a database (e.g., `resume_app_db`).
 
-4.  **Configure Environment Variables:**
-    -   Streamlit now recommends using `secrets.toml` for local development. Create a file `.streamlit/secrets.toml` with your database credentials:
-    ```toml
-    # .streamlit/secrets.toml
-    [mysql]
-    host = "localhost"
-    user = "your_mysql_user"
-    password = "your_mysql_password"
-    database = "resume_app_db"
-    ```
+Coding partner
 
-5.  **Initialize the database and run the app:**
-    -   First, run the `init_db` script from your terminal to create the `users` table:
-        ```bash
-        python -c "from auth.db import init_db; init_db()"
-        ```
-    -   Then, run the Streamlit application:
-        ```bash
-        streamlit run app.py
-        ```
+Show thinking
+Of course. Here is a README.md file for your "AI Resume & Interview Coach" project, structured exactly like the sample you provided.
 
-## ☁️ Deployment on Render
+## README.md
+You can copy and paste the entire content below into your README.md file.
 
-This project is configured for deployment on Render using the `render.yaml` file.
+Markdown
 
-1.  **Push to GitHub:**
-    -   Create a new repository on GitHub and push the project code.
+# 🚀 AI Resume & Interview Coach
 
-2.  **Create a New Blueprint on Render:**
-    -   Go to your Render Dashboard and click **New > Blueprint**.
-    -   Connect the GitHub repository you just created.
-    -   Render will automatically detect the `render.yaml` file and configure the services.
+This Streamlit web app helps users optimize their resume against job descriptions, practice with AI-generated questions, and run a full mock interview simulation.
 
-3.  **Configure Environment Variables:**
-    -   The `render.yaml` file references a secret group named `mysql-credentials`.
-    -   On Render, go to **Environment** and create a **New Secret Group**.
-    -   Name it `mysql-credentials`.
-    -   Add the following keys. The values will be automatically provided by the Render MySQL database instance once it's created.
-        -   `host`: The internal hostname of your Render MySQL service (e.g., `mysql-db`).
-        -   `user`: The user from your Render MySQL instance.
-        -   `password`: The password from your Render MySQL instance.
-        -   `database`: The database name from your Render MySQL instance.
+---
 
-4.  **Deploy:**
-    -   Click **Create** or **Apply Changes**. Render will build and deploy both the web service and the MySQL database. The `buildCommand` in `render.yaml` will automatically initialize the database table on the first deploy.
+## 📊 Features
+
+- ✅ **ATS Resume Analysis:** Get an ATS score, see matched vs. missing keywords, and visualize the results.
+- ✅ **Automated Resume Editing:** Automatically add missing keywords to your DOCX resume.
+- ✅ **AI Interview Coach:** Generate behavioral and technical questions based on your resume and a job description.
+- ✅ **AI Mock Interview Simulator:** Engage in a one-on-one conversational interview with an AI based on a job title.
+- ✅ **Performance Summary:** Receive a final feedback report on your mock interview performance.
+
+---
+
+## 📁 Project Structure
+
+```bash
+📦 ai-resume-interview-coach/
+├── app.py                     # Main Streamlit app file
+├── requirements.txt           # Required Python packages
+├── render.yaml                # Render deployment configuration
+├── .gitignore                 # Files to ignore for Git
+├── README.md                  # Project overview
+├── resume/                    # Module for resume processing
+│   ├── analyzer.py
+│   ├── editor.py
+│   └── extractor.py
+├── interview/                 # Module for AI interview features
+│   ├── coach.py
+│   └── simulator.py
+└── utils/                     # Utility modules
+    └── visualizer.py
+
+
+
+
+
+🖼️ Demo Screenshots
+Note: Please replace these placeholder paths with screenshots of your actual application.
+
+📊 ATS Score & Keyword Analysis
+🧠 AI Interview Prep Coach
+🤖 AI Mock Interview Simulator
+🚀 How to Run the Project Locally
+Clone the repository
+
+Bash
+
+git clone [https://github.com/Singhrahul2511/AI-Resume-Interview-Coach.git](https://github.com/Singhrahul2511/AI-Resume-Interview-Coach.git)
+cd AI-Resume-Interview-Coach
+(Optional) Create a virtual environment
+
+Bash
+
+python -m venv venv
+venv\Scripts\activate   # For Windows
+source venv/bin/activate  # For Linux/Mac
+Install dependencies
+
+Bash
+
+pip install -r requirements.txt
+Run the Streamlit app
+
+Bash
+
+streamlit run app.py
+Open your browser
+
+The app will run at http://localhost:8501
+
+🌐 Live Demo
+You can also check the live version here (replace with your actual link):
+
+🔗 [https://www.google.com/search?q=https://your-live-app-url.onrender.com/]
+
+🛠️ Built With
+Streamlit
+
+LangChain
+
+Google Gemini
+
+python-docx
+
+PyMuPDF
+
+Matplotlib
+
+👨‍💻 Author
+Rahul Kumar 🔗 LinkedIn
+
+📧 aiwithrahul25@gmail.com
+
+🎥 YouTube: AI with Rahul
